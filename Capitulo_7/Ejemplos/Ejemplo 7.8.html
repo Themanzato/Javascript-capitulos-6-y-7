@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var total;
+        var contadorCalificaciones;
+        var calificaciones;
+        var valorCalificacion;
+        var promedio;
+
+        total=0;
+        contadorCalificaciones=1;
+
+        while(contadorCalificaciones<=10){
+            calificaciones=window.prompt("Escriba la calificacion entera: ","0");
+            valorCalificacion=parseInt(calificaciones);
+            total=total+valorCalificacion;
+            contadorCalificaciones=contadorCalificaciones+1;
+        }
+        promedio=total/10;
+        document.writeln("<h1>El promedio de la clase es "+promedio+"</h1>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

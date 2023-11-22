@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calcularSueldoBruto(horasTrabajadas, tarifaPorHora) {
+        var horasNormales = Math.min(40, horasTrabajadas);
+        var horasExtras = Math.max(0, horasTrabajadas - 40);
+
+        var sueldoNormal = horasNormales * tarifaPorHora;
+        var sueldoExtra = horasExtras * (tarifaPorHora * 1.5);
+
+        return sueldoNormal + sueldoExtra;
+    }
+
+    for (var i = 1; i <= 3; i++) {
+        var horasTrabajadas = prompt("Ingrese las horas trabajadas para el empleado " + i + ":");
+        var tarifaPorHora = prompt("Ingrese la tarifa por hora para el empleado " + i + ":");
+
+        horasTrabajadas = parseFloat(horasTrabajadas);
+        tarifaPorHora = parseFloat(tarifaPorHora);
+
+        if (isNaN(horasTrabajadas) || isNaN(tarifaPorHora)) {
+            alert("Por favor, ingrese números válidos.");
+            i--; 
+        } else {
+            var sueldoBruto = calcularSueldoBruto(horasTrabajadas, tarifaPorHora);
+            document.write("<p>Sueldo bruto del empleado " + i + ": $" + sueldoBruto.toFixed(2) + "</p>");
+        }
+    }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

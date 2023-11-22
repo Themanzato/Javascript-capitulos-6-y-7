@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var numero_cuenta;
+        var saldo;
+        var articulos;
+        var creditos;
+        var credito;
+        var nuevo_saldo;
+
+        numero_cuenta=window.prompt("ingrese su numero de cuenta: ");
+        saldo=window.prompt("Ingrese su saldo al inicio del mes: ");
+        articulos=window.prompt("Ingrese el total de articulos: ");
+        creditos=window.prompt("Total de creditos aplicados este mes: ");
+        credito=window.prompt("Limite de credito: ");
+
+        nuevo_saldo=saldo+articulos-creditos;
+        
+        document.writeln("<h1>Su saldo es de: "+nuevo_saldo+"</h1>")
+        if(nuevo_saldo>credito){
+            document.writeln("<h2>Limite excedido</h2>");
+        }else{
+            document.writeln("<h2>Ok</h2>");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

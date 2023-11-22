@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var contador;
+        var numero;
+        var mayor1 = Number.MIN_SAFE_INTEGER; 
+        var mayor2 = Number.MIN_SAFE_INTEGER; 
+
+        for (contador = 0; contador < 10; contador++) {
+            numero = parseInt(window.prompt("Ingrese un numero de un solo digito: "), 10);
+
+            if (!isNaN(numero) && numero >= 0 && numero <= 9) {
+                if (numero > mayor1) {
+                    mayor2 = mayor1;
+                    mayor1 = numero;
+                } else if (numero > mayor2) {
+                    mayor2 = numero;
+                }
+            } else {
+                
+                alert("Por favor, ingrese un número de un solo dígito.");
+                contador--; 
+            }
+        }
+
+        document.writeln("El número mayor es " + mayor1);
+        document.writeln("El segundo número mayor es: " + mayor2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

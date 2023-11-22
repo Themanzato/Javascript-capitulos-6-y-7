@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var articulo;
+        var valor;
+        var sueldo;
+
+        for(i=0;i<4; i++){
+            articulo=window.prompt("Ingrese el numero de articulo del vendedor "+(i+1));
+            valor= window.prompt("Ingrese el valor total de ventas del vendedor "+(i+1));
+            sueldo=200+(valor*.09)
+            document.writeln("<h1>El sueldo del trabajador "+(i+1)+" es:"+sueldo+"</h1>");
+        }
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

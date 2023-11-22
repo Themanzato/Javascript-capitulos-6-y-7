@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var numeros = [];
+            for (var i = 0; i < 5; i++) {
+                var numero = parseInt(prompt("Ingrese el entero: " + (i + 1) + ":"));
+                numeros.push(numero);
+            }
+
+        var minimo = Math.min.apply(null, numeros);
+        var maximo = Math.max.apply(null, numeros);
+
+        alert("El entero más pequeño es: " + minimo + "\nEl entero más grande es: " + maximo);
+
+                        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

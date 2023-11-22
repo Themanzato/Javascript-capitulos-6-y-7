@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var nombre;
+        var ahora=new Date();
+        var hora=ahora.getHours();
+
+        nombre=window.prompt("Escriba su nombre joto");
+
+        if(hora < 12)
+            document.write("<h1>Buenos dias joto digo, ")
+        if(hora >= 12){
+            hora=hora-12;
+            if(hora<6)
+                document.write("<h1>Buenas tardes joto digo, ")
+            if(hora>=6)
+                document.write("<h1>Buenas noches joto digo, ")
+        }
+        document.writeln(nombre + ", bienvenido a la programacion en javascript")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

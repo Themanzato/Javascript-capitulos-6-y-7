@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descifrado de Datos</title>
+    <script>
+        function descifrarDatos() {
+            var enteroCifrado = prompt("Ingrese el entero cifrado de cuatro dígitos:");
+
+            if (!/^\d{4}$/.test(enteroCifrado)) {
+                alert("Por favor, ingrese un entero cifrado de cuatro dígitos válido.");
+                return;
+            }
+
+            var digitosCifrados = enteroCifrado.split("").map(Number);
+
+            var temp = digitosCifrados[0];
+            digitosCifrados[0] = digitosCifrados[2];
+            digitosCifrados[2] = temp;
+
+            temp = digitosCifrados[1];
+            digitosCifrados[1] = digitosCifrados[3];
+            digitosCifrados[3] = temp;
+
+            for (var i = 0; i < digitosCifrados.length; i++) {
+                digitosCifrados[i] = (digitosCifrados[i] + 3) % 10;
+            }
+
+            alert("Entero descifrado: " + digitosCifrados.join(""));
+        }
+    </script>
+</head>
+<body>
+    <button onclick="descifrarDatos()">Descifrar Datos</button>
+</body>
+</html>

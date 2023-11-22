@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var x,y,z,resultado1,resultado2,resultado3;
+        var xVal,yVal,zVal;
+
+        xVal=window.prompt("Escriba el primer numero:");
+        yVal=window.prompt("Escriba el segundo numero:");
+        zVal=window.prompt("Escriba el tercer numero:");
+
+        x=parseInt(xVal);
+        y=parseInt(yVal);
+        z=parseInt(zVal);
+
+        resultado1=x+y+z;
+        resultado2=(x+y+z)/2;
+        resultado3=x*y*z;
+        
+        document.writeln("<h1>La suma de los numeros es "+resultado1+"</h1>");
+        document.writeln("<h1>El promedio de los numeros es "+resultado2+"</h1>");
+        document.writeln("<h1>El producto de los numeros es "+resultado3+"</h1>");
+        
+        if(x>y)
+            if(x>z)
+                alert(x+ " es el numero mayor")
+                if(y>x)
+                    if(y>z)
+                        alert(y+ " es el numero mayor")
+                        if(z>x)
+                            if(z>y)
+                                alert(z+ " es el numero mayor")
+        if(x<y)
+            if(x<z)
+                alert(x+ " es el numero menor")
+                if(y<x)
+                    if(y<z)
+                        alert(y+ " es el numero menor")
+                        if(z<x)
+                            if(z<y)
+                                alert(z+ " es el numero menor")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
