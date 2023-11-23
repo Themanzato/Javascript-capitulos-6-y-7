@@ -5,3 +5,5 @@ Arroyo Utrera Mario Alberto -
 Trejo Landa Omar -
 Flores Méndez Brian Delfino -
 Morales Ana -
+Martinez hernandez Diego joseph - 
+Sanchez Hernandez Joseph Alejandro
